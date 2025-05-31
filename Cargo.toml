@@ -1,0 +1,13 @@
+[package]
+name = "flcleaner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.24", features = ["default"] }
+walkdir = "2.3"
+regex = "1.7"
+chrono = { version = "0.4", features = ["serde"] }
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "windef", "shellapi", "objbase", "combaseapi"] }
