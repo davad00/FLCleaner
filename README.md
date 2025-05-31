@@ -34,8 +34,4 @@ This utility helps you manage these backups by keeping only the most recent back
 
 ## Support
 
-If you encounter any issues or have suggestions for improvements, please submit them to [your contact info or issue tracker].
-
-## License
-
-[Your chosen license]
+If you encounter any issues or have suggestions for improvements, please submit them to FruityCleaner@n9recods.com
