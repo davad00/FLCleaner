@@ -1,37 +1,82 @@
 # FL Studio Backup Cleaner
 
-A utility tool to help FL Studio users manage their project backup files.
+A utility tool that helps FL Studio users manage their project backup files by scanning drives and cleaning up old backups while keeping the latest version of each project.
+
+![FL Studio Backup Cleaner Screenshot](images/screenshot-1.jpg)
 
 ## Features
 
-- **Scan for Backups**: Quickly scan all drives for FL Studio project backup files
-- **Smart Cleanup**: Automatically clean old backups while keeping the latest version of each project
-- **Customizable Settings**: Configure which drives to scan and performance options
-- **Space Saving**: Free up valuable disk space by removing unnecessary backup files
-- **Dark/Light Mode**: Choose your preferred theme
+- **Intelligent Scanning**: Quickly scans your drives for FL Studio backup files with multithreaded performance
+- **Smart Cleanup**: Automatically keeps the latest backup of each project while removing older versions
+- **Customizable Settings**: Configure scan depth, thread count, and drive selection to match your system
+- **Light & Dark Themes**: Choose between light and dark modes for comfortable use in any environment
+- **Real-time Progress**: Monitor scan progress with detailed information and color-coded indicators
+- **Safe Operation**: Preview what will be deleted before cleaning to ensure you never lose important files
 
-## Usage
+## Download
 
-1. Launch the application
-2. Click "Scan for FL Studio Backups"
-3. After scanning completes, review the found backup files
-4. Click "Clean Old Backups" to remove all but the latest backup for each project
+Download the latest version from the [Releases](https://github.com/davad00/FLCleaner/releases) page.
 
-## Settings
+### Options:
+- [Installer Version](https://github.com/davad00/FLCleaner/releases/download/v0.1/FruityCleaner_Installer_1.0.0.exe)
+- [Portable Version (ZIP)](https://github.com/davad00/FLCleaner/releases/download/v0.1/FruityCleaner_StandAlone_1.0.0.zip)
 
-Access the settings menu by clicking the ⚙️ button in the top-right corner:
+## How It Works
 
-- **Theme**: Choose between light and dark mode
-- **Drive Selection**: Select which drives to include in the scan
-- **Performance Settings**: Configure scan depth and thread count
-- **Auto-Clean**: Enable automatic cleanup after scanning
+1. **Scan Your Drives**: Select which drives to scan and start the process with a single click
+2. **Review Findings**: See all discovered FL Studio backup files organized by project
+3. **Clean Up**: Click "Clean Old Backups" to remove outdated files while keeping the latest version of each project
+4. **Enjoy Free Space**: See how much disk space you've reclaimed and enjoy your tidier system
 
-## About FL Studio Backups
+## Building from Source
 
-FL Studio creates backup files when you save projects. These files are stored in a "Backup" folder within your project folder with the naming format "Project Name (overwritten at XXhYY).flp". While these backups are useful, they can consume significant disk space over time.
+### Prerequisites
 
-This utility helps you manage these backups by keeping only the most recent backup for each project, saving disk space while maintaining a safety net in case you need to recover work.
+- Rust 1.70.0 or newer
+- Cargo package manager
 
-## Support
+### Build Steps
 
-If you encounter any issues or have suggestions for improvements, please submit them to FruityCleaner@n9recods.com
+1. Clone the repository:
+   ```
+   git clone https://github.com/davad00/FLCleaner.git
+   cd FLCleaner
+   ```
+
+2. Build the project:
+   ```
+   cargo build --release
+   ```
+
+3. The compiled executable will be in `target/release/flcleaner.exe`
+
+## Website
+
+This repository also contains the website for the FL Studio Backup Cleaner application, which is hosted via GitHub Pages.
+
+### Website Development
+
+The website files are located in the root directory:
+
+- `index.html` - Main HTML file
+- `styles.css` - CSS styles for the website
+- `script.js` - JavaScript functionality
+- `images/` - Directory containing all website images
+
+To work on the website locally, simply open `index.html` in your browser.
+
+### Deployment
+
+The website is automatically deployed from the `gh-pages` branch. See [GitHub Pages Deployment Guide](github_pages_deployment.md) for more details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+FL Studio is a registered trademark of Image-Line Software. This tool is not affiliated with or endorsed by Image-Line Software.
